@@ -12,6 +12,7 @@
   entries = $(container).find('input.date-time-picker')
   entries.each (index, entry) ->
     options = $(entry).data 'datepicker-options'
+    jQuery.datetimepicker.setLocale('es')
     $(entry).datetimepicker $.extend(defaults, options)
 
 $(document).on 'ready turbolinks:load', ->
